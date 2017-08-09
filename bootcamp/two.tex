@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+
+\usetikzlibrary{automata,positioning}
+%\usepackage{layout}
+
+% \setlength{\voffset}{-0.75in}
+% \setlength{\headsep}{5pt}
+
+\title{\vspace{-5.5cm}HW 2}
+\author{Xiaowei Wang}
+\date{August 8 2017}
+
+
+
+\begin{document}
+\maketitle
+
+
+\begin{enumerate}
+    \item Using Bayes Rule:
+    \\ $P(H_{1}\mid O_{1})= \frac {P(O_{1}\mid H_{1})P(H_{1})}
+    {P(O_{1}\mid H_{1})P(H_{1}) + P(O_{1}\mid\neg H_{1})P(\neg H_{1}) }$
+    \\
+    \\ $= \frac{ \frac{1}{3}\times \frac{1}{2}}
+    {\frac{1}{3}\times \frac{1}{2}+ (\frac{2}{3} \times \frac{1}{2}) }$
+    \\
+    \\ $= 0.333 $
+
+    \item
+        \begin{tabular}{ L  L  L }
+            $-2$ & 0 & 2 \\
+            \hline\hline
+            $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$
+        \end{tabular}
+        \\
+        \text The expected value:
+    \\$ E(\textit{X}) = -2 \times \frac{1}{6} + 0 \times \frac{1}{6} + 2 \times \frac{4}{6} = 1     $
+    \\
+    \\ Variance:
+    \\ $ V(X) = (-2-1)^{2} \times \frac{1}{6} + (0-1)^{2} \times \frac{1}{6} + (2-1)^{2} \times \frac{4}{6} = \frac{14}{6}  $
+
+    \item
+        \begin{enumerate}
+            \item [a.]
+            $ \int_{-1}^{1} h(1-z^2) dz = 1 \\
+            h(z- \frac{1}{3}z^3) \rvert_{-1}^{1} = 1 \\
+            h [1- -\frac{1}{3} \times 1^3 ] - h [-1- -\frac{1}{3} \times (-1)^3 ] \\
+            h[\frac{2}{3} + \frac{2}{3}] =1\\
+            \frac{4}{3}h = 1,  h = \frac{3}{4}$ \\
+            \item[b.]
+            CDF is the integral of the PDF.\\
+            PDF is $\frac{3}{4}(1-z^2)$ \\
+            CDF is $   \int_{-1}^{z}\frac{3}{4}(1-z^2)   $ \\
+            \item [c.]
+            The probability between 0 and 0.5: \\
+            $
+            h(z- \frac{1}{3}z^3) \rvert_{0}^{0.5} = 1 \\
+            h [0.5- -\frac{1}{3} \times 0.5^3 ] - h [0-\frac{1}{3} \times (0)^3 ] \\
+            h = 0.34375
+            $
+
+        \end{enumerate}
+
+
+    \item
+        \begin{enumerate}
+
+        \item [a.] P(second ticket is 3 without knowing the first) $ = p, 0\leq p \leq 1  $
+        \\ The probability that the second ticket is 3, given that the first ticket is 2 is $\frac{1}{5}$
+        \item [b.] The unconditional probability is different than the conditional, because the value of the second ticket is dependent on the first ticket.
+        \item [c.] 2 and 3: $ P(2 \cap 3) = \frac{1}{6} \times \frac{1}{5} = \frac{1}{30} $
+        \\ probability if first or second is a 3:
+        $ \frac{1}{6} and \frac{1}{5}, since the first is unconditional and then the second probability is the first card is removed  $
+
+        \end{enumerate}
+
+    \item
+        \begin{enumerate}
+            \item [a.]
+            The mean of the box is 0.5. Get the mean and then put in how much each value deviates from the mean, which is -0.5 (0-0.5) and 0.5 (1-0.5). \\
+            $ SD = \sqrt[2] { \frac{-0.5^{2} + 0.5^{2}  }{2} } = 0.5$
+            \item [b.]
+            The variance is the Standard Deviation squared, $ 0.5^{2} = 0.25$
+            \item [c.]
+            The average of n tickets is not a random variable \\
+            The variance is $ n \times$ the variance found above $0.25\textit{n} $ \\
+            The SD is $ n \times$ the SD found above, $0.5\textit{n}$
+        \end{enumerate}
+
+    \item
+        \begin{enumerate}
+            \item [a.]
+            \begin{tabular}{|a | a | a|}
+            a & b & avg \\
+            \hline\hline
+            1 & 2 & 1.5\\
+            1 & 3 & 2 \\
+            2 & 3 & 2.5 \\
+            2 & 1 & 1.5 \\
+            3 & 1 & 2 \\
+            3 & 2 & 2.5 \\
+            \hline
+             & avg of avg & 2 \\
+             \hline
+             & box avg & $ \frac{1+2+3}{3} = 2 $ \\
+            \hline\hline
+            \end{tabular}
+            \item [b.]
+            The average of all the first values is 2
+            \item [c.]
+            The average of the second values is also 2
+            \item [d.]
+            Each of these possible outcomes are equally likely
+            \item [e.]
+            The expected value of the first draw is not equal to the expected value of the second. Something about moment of a distribution (?)
+
+
+        \end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

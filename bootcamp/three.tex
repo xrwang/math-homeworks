@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+% decent example of doing mathematics and proofs in LaTeX.
+% An Incredible degree of information can be found at
+% http://en.wikibooks.org/wiki/LaTeX/Mathematics
+
+% Use wide margins, but not quite so wide as fullpage.sty
+\oddsidemargin 0.25in
+\evensidemargin 0.25in
+\topmargin 0.25in
+\textwidth 6.5in \textheight 8 in
+% That's about enough definitions
+
+\usepackage[fleqn]{amsmath}
+\usepackage{upgreek}
+
+\begin{document}
+\author{Xiaowei Wang}
+\title{\vspace{-3cm}HW 3}
+\maketitle
+
+\begin{enumerate}
+
+\item
+ \begin{enumerate}
+ \item [a.] The expected value for the number of students in the sample older than 25 is:
+    \begin{flalign*}
+        E(x\geq 25) = 200.
+        E(x\geq 25) = \frac{160+240}{2}
+    \end{flalign*}
+ The SE for the number of students in the same older than 25 = 40.
+
+    \begin{flalign*}
+        \frac{ (160-200)^2 + (240-200)^2   }{2} = 1600\\
+        SD = \sqrt[2]{1600} \\
+        SE = \frac{40}{\sqrt[2]{2} } = 28.36
+    \end{flalign*}
+
+     \item [b.]
+        The expected value for percentage of students older than 25 :
+        \begin{flalign*}
+            E(X)  = p, E(x) = 0.4. \\
+            SE = \frac{\sqrt[2]{0.4(1-.4)}}{\sqrt[2]{400} } = 0.024
+        \end{flalign*}
+    \end{enumerate}
+\item
+    If $n=25$ and the expected value is 50, the SE is 10, if $n=100$, the expected value is 200 $ (50 \times 4) $and the SE is $ 5 $
+            \begin{flalign*}
+                SE = \frac{SD}{\sqrt[2]{n}} \\
+                10 = \frac{SD}{\sqrt[2]{25}} \\
+                SD = 50 \\
+                SE of 100 = \frac{50}{\sqrt[2]{100}}
+            \end{flalign*}
+
+
+\item
+    \begin{enumerate}
+            \item [a.] true, the mean of 0,2,3,4 and 6 is 3. For 100 draws, $ 100 \times 3 = 300 $
+            \item [b.] false (?)
+            \item [c.] false, we can't say with certainty
+            \item [d.] false, can't say with certainty
+    \end{enumerate}
+
+\item
+        SE of N=12 is 10 \\
+        \begin{flalign*}
+            SE = \frac{SD}{\sqrt[2]{n}} \\
+            10 = \frac{SD}{\sqrt[2]{12}} \\
+            SD = 34.641 \\
+                 \end{flalign*}
+
+            SE of N =22 is: \\
+        \begin{flalign*}
+            \frac{34.641}{\sqrt[2]{22}} = 7.385 \\
+         \end{flalign*}
+
+
+\item
+            SE of N=25 is 50 \\
+        \begin{flalign*}
+            SE = \frac{SD}{\sqrt[2]{n}} \\
+            50 = \frac{SD}{\sqrt[2]{25}} \\
+            SD = 250 \\
+                 \end{flalign*}
+
+            SE of N =64 is: \\
+        \begin{flalign*}
+            \frac{250}{\sqrt[2]{64}} = 31.25 \\
+         \end{flalign*}
+
+
+\item 0 (?). It can approach 0.5 but it won't be exactly 0.5 (?)
+
+\item
+    The correlation between the heights would be 0 (none of the heights are related to each other).
+\item
+    nb: used an excel spreadsheet and the formula to calculate covariance
+    \item [a.] -1.6
+    \item [b.] 0.3
+    \item [c.] 2
+
+\end{enumerate}
+\end{document}
